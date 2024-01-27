@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3E1F6D"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/ivFundo"
+        android:layout_width="429dp"
+        android:layout_height="464dp"
+        android:layout_marginTop="108dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tripixellogo" />
+
+    <ImageButton
+        android:id="@+id/btnSobreNos"
+        android:layout_width="98dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="108dp"
+        android:background="#000000"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/btnSobreNos"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintStart_toEndOf="@+id/btnSuporte"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btnsobrenos"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/btnSuporte"
+        android:layout_width="105dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="108dp"
+        android:background="#00000000"
+        android:backgroundTint="#00000000"
+        android:contentDescription="@string/btnSuporte"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btnsuporte" />
+
+    <ImageButton
+        android:id="@+id/btnLoja"
+        android:layout_width="191dp"
+        android:layout_height="99dp"
+        android:layout_marginBottom="52dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/btnLoja"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/btnloja"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+    <ImageButton
+        android:id="@+id/btnPerfil"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="17dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

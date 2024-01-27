@@ -1,0 +1,62 @@
+drop database IF EXISTS bdtripixel;
+create database IF NOT EXISTS bdtripixel;
+use bdtripixel;
+
+set @OLD_FOREIGN_KEY_CHECKS = @@FOREIGN_KEY_CHECKS,
+FOREIGN_KEY_CHECKS = 0;
+
+drop table IF EXISTS TB_USUARIO;
+create table IF NOT EXISTS TB_USUARIO(
+    id_usuario int AUTO_INCREMENT,
+    nome_usuario varchar(30) NOT NULL,
+    email_usuario varchar(80) NOT NULL,
+    senha_usuario varbinary(255) NOT NULL,
+    foto_usuario varchar(100) DEFAULT 'sem_foto_perfil.png',
+    status_usuario enum('ATIVO', 'DESATIVO') NOT NULL DEFAULT 'ATIVO',
+    
+    PRIMARY KEY(id_usuario),
+    CONSTRAINT UQemail_usuario UNIQUE(email_usuario),
+    CONSTRAINT UQnome_usuario UNIQUE(nome_usuario)
+);
+
+
+drop table IF EXISTS TB_JOGO;
+create table IF NOT EXISTS TB_JOGO(
+    id_jogo int AUTO_INCREMENT,
+    nome_jogo varchar(30) NOT NULL,
+    descricao_jogo text NOT NULL,
+    preco_jogo decimal(5,2) NOT NULL,
+    dta_lancamento_jogo date NOT NULL,
+    
+    PRIMARY KEY(id_jogo)
+);
+
+
+drop table IF EXISTS TB_PROGRESSO;
+create table IF NOT EXISTS TB_PROGRESSO(
+    id_progresso int AUTO_INCREMENT,
+    id_jogo int NOT NULL,
+    id_usuario int NOT NULL,
+    prim_entrada_progresso date,
+    fase_atual_progresso int(2),
+    tempo_jogo_progresso time,
+    
+    PRIMARY KEY(id_progresso),
+    FOREIGN KEY(id_jogo) REFERENCES TB_JOGO(id_jogo),
+    FOREIGN KEY(id_usuario) REFERENCES TB_USUARIO(id_usuario)
+);
+
+
+
+alter table TB_USUARIO AUTO_INCREMENT = 1;
+alter table TB_JOGO AUTO_INCREMENT = 1;
+alter table TB_PROGRESSO AUTO_INCREMENT = 1;
+
+delete from TB_USUARIO;
+delete from TB_JOGO;
+delete from TB_PROGRESSO;
+
+
+
+insert into TB_JOGO VALUES
+    (DEFAULT, 'The Blind Monk', 'Jogue como um monge que perdeu sua visão, vivendo em uma cidade utópica lutando pelos seus direitos em intensos combates.', 0.00, '2023-11-24');

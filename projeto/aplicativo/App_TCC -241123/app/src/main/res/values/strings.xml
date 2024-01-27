@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">TRIPIXEL</string>
+
+    <string name="lblTriPixel">TriPixel</string>
+
+    <string name="btnCadastrar">Cadastrar</string>
+    <string name="btnEntrar">Entrar</string>
+
+    <string name="lblEntrar">Entrar</string>
+    <string name="txtUsuarioEntrar">Seu nome de usuário</string>
+    <string name="txtSenhaEntrar">Sua senha</string>
+    <string name="btnEntrarApp">Login</string>
+
+    <string name="lblCadastro">Cadastro</string>
+    <string name="btnCadastrarApp">Cadastro</string>
+    <string name="txtEmailCadastrar">Crie seu Email</string>
+    <string name="txtSenhaCadastrar">Crie sua senha</string>
+    <string name="txtNomeCadastrar">Seu nome</string>
+    <string name="lblUsuario">Usuário:</string>
+    <string name="lblSenha">Senha:</string>
+    <string name="todo">TODO</string>
+    <string name="btnLoja">.</string>
+    <string name="btnSuporte">.</string>
+    <string name="btnSobreNos">.</string>
+    <string name="txtSenhaConfCadastrar">Repita sua senha</string>
+    <string name="btnEsqueciSenha">Esqueci minha senha</string>
+    <string name="lblEsqueceuSenha">Recuperação de Senha</string>
+    <string name="txtEmailRecuperar">Digite o email de sua conta</string>
+    <string name="lblInstrucoes">Será enviado para seu email instruções para recuperar sua senha após clicar em enviar abaixo</string>
+    <string name="lblConfSenha">Confirmar Senha:</string>
+    <string name="lblSenhaCadastro">Senha:</string>
+    <string name="lblEmailCadastro">Email:</string>
+    <string name="lblJogo1Jogos">The Blink Monk</string>
+    <string name="lblTelasJogos">Jogos</string>
+    <string name="lblMaisJogos">Mais jogos em breve</string>
+    <string name="lblEmail">Email:</string>
+    <string name="txtvazio" />
+</resources>
